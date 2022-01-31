@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Quote extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'body', 'character_id'
+    ];
 }

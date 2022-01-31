@@ -15,6 +15,16 @@ class CreateCharactersTable extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('birthday');
+            $table->json('occupation');
+            $table->text('img');
+            $table->string('status');
+            $table->string('nickname')->nullable();
+            $table->json('appearance');
+            $table->string('portrayed');
+            $table->string('category');
+            $table->json('better_call_saul_appearance')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,14 @@ class CreateDeathsTable extends Migration
     {
         Schema::create('deaths', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('character_id')->constrained()->cascadeOnDelete();
+            $table->text('death');
+            $table->string('cause');
+            $table->string('responsible');
+            $table->string('last_words')->nullable();
+            $table->integer('season');
+            $table->integer('episode');
+            $table->integer('number_of_deaths');
             $table->timestamps();
         });
     }

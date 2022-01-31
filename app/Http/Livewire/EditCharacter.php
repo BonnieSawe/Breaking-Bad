@@ -12,8 +12,6 @@ class EditCharacter extends Component
 
     public $form;
 
-    public $quoteForm;
-
     public $statusOptions = [
         'Presumed dead' => 'Presumed dead',
         'Alive' => 'Alive'

@@ -17,7 +17,7 @@ class CreateCharactersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('birthday');
-            $table->json('occupation');
+            $table->text('occupation');
             $table->text('img');
             $table->string('status');
             $table->string('nickname')->nullable();

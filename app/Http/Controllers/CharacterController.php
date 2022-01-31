@@ -25,7 +25,7 @@ class CharacterController extends Controller
                 ['name' => $character->name],
                 [
                     'birthday' =>  $character->birthday,
-                    'occupation' => $character->occupation,
+                    'occupation' => str_replace('"', '', $character->occupation[0]),
                     'img' => $character->img,
                     'status' => $character->status,
                     'nickname' => $character->nickname,
@@ -43,7 +43,6 @@ class CharacterController extends Controller
                 Death::updateOrCreate(
                     ['character_id' => $saved_character->id],
                     [
-                        'death' => $death->death,
                         'cause' => $death->cause,
                         'responsible' => $death->responsible,
                         'last_words' => $death->last_words,

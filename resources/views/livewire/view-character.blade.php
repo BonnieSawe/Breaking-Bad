@@ -40,7 +40,7 @@
                                         {{ $character->name }}'s favorite quote{{ $character->quotes->count() > 1 ? ' among many' : '' }} is;
                                     </h3>
                                     <p class="mt-2 text-lg italic leading-relaxed text-blueGray-500">
-                                        "{{ $character->quotes[0]->body }}"
+                                        "{{ $character->quotes->first()->body }}"
                                     </p>
                                 @endif
 
